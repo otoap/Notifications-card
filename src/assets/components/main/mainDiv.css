@@ -1,0 +1,65 @@
+.card {
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+img {
+    width: 3.9rem;
+    align-self: flex-start;
+}
+
+h2 {
+    color: #1C202B;
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: inline;
+}
+
+
+p {
+    color: #5E6778;
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: inline;
+}
+
+.pspan {
+    color: #5E6778;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.gspan {
+    color: #0A327B;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+span {
+    color: #939CAD;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.unreadTexts::after {
+    content: "";
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 0.7rem;
+}
+
+.message {
+    display: block;
+    padding: 1.6rem;
+    border-radius: 5px;
+    border: 1px solid #DDE7EE;
+    margin-top: 1.2rem;
+}
+

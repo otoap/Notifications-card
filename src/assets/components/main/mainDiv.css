@@ -19,6 +19,9 @@ h2 {
     display: inline;
 }
 
+h2:hover, p span:hover {
+    color:#0A327B
+}
 
 p {
     color: #5E6778;
@@ -61,5 +64,10 @@ span {
     border-radius: 5px;
     border: 1px solid #DDE7EE;
     margin-top: 1.2rem;
+}
+
+.message:hover {
+    background-color: #E5EFFA;
+    border: 1px solid #DDE7EE
 }
 

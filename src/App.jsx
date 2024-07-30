@@ -11,14 +11,16 @@ let objArr = [
     action: " reacted to your recent post",
     on: "My first tournament today!",
     status: false,
-    time: "1m ago"
+    time: "1m ago",
+    id: 1
   },
   {
     photo: "/images/avatar-angela-gray.webp",
     name: "Angela Gray",
     action: " followed you",
     status: false,
-    time: "5m ago"
+    time: "5m ago",
+    id: 2
   },
   {
     photo: "/images/avatar-jacob-thompson.webp",
@@ -26,7 +28,8 @@ let objArr = [
     action: " has joined your group",
     group: "Chess Club",
     status: false,
-    time: "1 day ago"
+    time: "1 day ago",
+    id: 3
   },
   {
     photo: "/images/avatar-rizky-hasanuddin.webp",
@@ -34,14 +37,16 @@ let objArr = [
     action: " sent you a private message",
     status: true,
     time: "5 days ago",
-    message: "Hello, thanks for setting up the Chess Club. I’ve been a member for a few weeks now and I’m already having lots of fun and improving my game."
+    message: "Hello, thanks for setting up the Chess Club. I’ve been a member for a few weeks now and I’m already having lots of fun and improving my game.",
+    id: 4
   },
   {
     photo: "/images/avatar-kimberly-smith.webp",
     name: "Kimberly Smith",
     action: " commented on your picture",
     status: true,
-    time: "1 week ago"
+    time: "1 week ago",
+    id: 5
   },
   {
     photo: "/images/avatar-nathan-peterson.webp",
@@ -49,7 +54,8 @@ let objArr = [
     action: " reacted to your recent post",
     on: "5 end-game strategies to increase your win rate",
     status: true,
-    time: "2 weeks ago"
+    time: "2 weeks ago",
+    id: 6
   },
   {
     photo: "/images/avatar-anna-kim.webp",
@@ -57,20 +63,21 @@ let objArr = [
     action: " left the group",
     group: "Chess Club",
     status: true,
-    time: "2 weeks ago"
+    time: "2 weeks ago",
+    id: 7
   }
 ]
 
 
 
 function App() {
-  const [seeStatus, setSeestatus] = useState()
+  const [objArray, setObjArray] = useState(objArr);
   return (
     <>
       <Header/>
       <main>
-        {objArr.map(obj => (
-          <Card key={Math.random()} obj={obj} seeStatus={seeStatus} setSeestatus={setSeestatus}/>
+        {objArray.map(obj => (
+          <Card key={Math.random()} obj={obj} objArray={objArray} setObjArray={setObjArray}/>
         ))}
       </main>
     </>

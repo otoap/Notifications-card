@@ -1,12 +1,19 @@
-import { useState } from "react"
 import "./mainDiv.css"
 
-export default function card({obj, seeStatus, setSeestatus}) {
+export default function card({obj, objArray, setObjArray}) {
+
     return (
         <div onClick={()=> {
-            console.log(obj.status)
-            return obj.status
-        }} style={!obj.status?{backgroundColor:"#F7FAFD"}:{backgroundColor:""}} className="card">
+            if(obj.status==false) {
+                let x = objArray.map(item => {
+                    if(item.id == obj.id) {
+                        item.status = !item.status;
+                    }
+                    return item
+                })
+                setObjArray(x)
+            }
+            }} style={!obj.status?{backgroundColor:"#F7FAFD"}:{backgroundColor:""}} className="card">
             <img src={obj.photo} alt="avatar-image" />
             <div className="textDiv">
                 <div className={obj.status? "texts" : "unreadTexts"}>
@@ -21,3 +28,5 @@ export default function card({obj, seeStatus, setSeestatus}) {
         </div>
     )
 }
+
+//onclickze ver vucvli fers, yvelas ecvleba klikisas, app shi onclick ar mushaobs.

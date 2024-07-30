@@ -1,17 +1,17 @@
 import "./mainDiv.css"
 
-export default function card({obj, objArray, setObjArray}) {
+export default function card({obj, objArray, setObjArray, setCounter}) {
 
     return (
         <div onClick={()=> {
             if(obj.status==false) {
-                let x = objArray.map(item => {
+                setObjArray(objArray.map(item => {
                     if(item.id == obj.id) {
                         item.status = !item.status;
                     }
                     return item
-                })
-                setObjArray(x)
+                }))
+                setCounter(objArray.filter(item => !item.status).length)
             }
             }} style={!obj.status?{backgroundColor:"#F7FAFD"}:{backgroundColor:""}} className="card">
             <img src={obj.photo} alt="avatar-image" />

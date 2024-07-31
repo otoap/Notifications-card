@@ -72,11 +72,11 @@ let objArr = [
 
 function App() {
   const [objArray, setObjArray] = useState(objArr);
-  // const counter = (objArray.filter(item => !item.status).length);
-  // console.log(counter)
+  const counter = (objArray.filter(item => !item.status).length);
+  console.log(objArray)
   return (
     <>
-      <Header setObjArray={setObjArray} objArray={objArray}/>
+      <Header counter={counter} setObjArray={setObjArray} objArray={objArray}/>
       <main>
         {objArray.map(obj => (
           <Card key={Math.random()} obj={obj} objArray={objArray} setObjArray={setObjArray}/>

@@ -27,5 +27,3 @@ export default function card({obj, objArray, setObjArray, setCounter}) {
         </div>
     )
 }
-
-//onclickze ver vucvli fers, yvelas ecvleba klikisas, app shi onclick ar mushaobs.

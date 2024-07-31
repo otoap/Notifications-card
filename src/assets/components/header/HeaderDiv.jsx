@@ -6,7 +6,7 @@ export default function Header({ setObjArray, objArray}) {
             <h1>Notifications <span>0</span></h1>
             <button onClick={()=> {
                 setObjArray(()=> {
-                    objArray.map(obj => {
+                    return objArray.map(obj => {
                         if(!obj.status){
                             obj.status = true
                         }

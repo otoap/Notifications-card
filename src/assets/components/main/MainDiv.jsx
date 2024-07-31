@@ -11,7 +11,6 @@ export default function card({obj, objArray, setObjArray, setCounter}) {
                     }
                     return item
                 }))
-                setCounter(objArray.filter(item => !item.status).length)
             }
             }} style={!obj.status?{backgroundColor:"#F7FAFD"}:{backgroundColor:""}} className="card">
             <img src={obj.photo} alt="avatar-image" />

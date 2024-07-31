@@ -1,9 +1,9 @@
 import "./header.css"
 
-export default function Header({counter, setObjArray, objArray}) {
+export default function Header({ setObjArray, objArray}) {
     return(
         <div className="headerDiv">
-            <h1>Notifications <span>{counter}</span></h1>
+            <h1>Notifications <span>0</span></h1>
             <button onClick={()=> {
                 setObjArray(()=> {
                     objArray.map(obj => {
